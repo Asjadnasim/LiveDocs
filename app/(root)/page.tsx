@@ -8,6 +8,7 @@ import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { dateConverter } from '@/lib/utils';
 import { DeleteModal } from '@/components/DeleteModal';
+import Notifications from '@/components/Notifications';
 
 const Home = async () => {
 	const clerkUser = await currentUser();
@@ -21,7 +22,8 @@ const Home = async () => {
 		<main className='home-container'>
 			<Header className='sticky left-0 top-0'>
 				<div className='flex items-center gap-2 lg:gap-4'>
-					Notification
+					<Notifications />
+
 					<SignedIn>
 						<UserButton />
 					</SignedIn>
