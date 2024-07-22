@@ -140,6 +140,7 @@ export const removeCollaborators = async ({
 
 export const deleteDocument = async (roomId: string) => {
 	try {
+		// Delete Document
 		await liveblocks.deleteRoom(roomId);
 		revalidatePath('/');
 		redirect('/');
